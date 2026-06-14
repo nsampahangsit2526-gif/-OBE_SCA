@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คู่มือการวัดและประเมินผล & YLOs/PLOs Tracking Plan · สื่อสารการกีฬา มกช.</title>
+<meta name="description" content="คู่มือการวัดและประเมินผลสัมฤทธิ์ทางการศึกษา และแผนติดตามผลลัพธ์การเรียนรู้รายชั้นปี (YLOs/PLOs Tracking Plan) หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสื่อสารการกีฬา มหาวิทยาลัยการกีฬาแห่งชาติ วิทยาเขตกรุงเทพ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --ink:#0E1A2B; --navy:#13283F; --navy2:#1C3A5A; --paper:#EEF2F7; --card:#FFFFFF;
+ --line:#DCE4EE; --muted:#5E6E82; --soft:#8294A8;
+ --energy:#FF5A2C; --teal:#0FB5A6;
+ --p1:#2F6FED; --p2:#0FB5A6; --p3:#7C5CFF; --p4:#FF7A18;
+ --shadow:0 1px 2px rgba(16,26,43,.06),0 8px 24px rgba(16,26,43,.06);
+ --radius:14px;
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.kanit,.num{font-family:'Kanit',sans-serif;font-weight:600;letter-spacing:.2px}
+a{color:inherit}
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,var(--navy),var(--navy2));color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--energy);display:grid;place-items:center;flex:none;box-shadow:0 4px 14px rgba(255,90,44,.4)}
+.logo svg{width:22px;height:22px}
+.brand .t{min-width:0}
+.brand .t b{font-family:'Kanit';font-weight:600;font-size:15px;display:block;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand .t span{font-size:11.5px;color:#A9C0D8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.spacer{flex:1}
+.seg{display:flex;background:rgba(255,255,255,.10);border-radius:999px;padding:3px;gap:2px}
+.seg button{font-family:'Kanit';font-weight:500;font-size:13px;color:#cfe0f0;background:none;border:0;padding:6px 13px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.seg button.on{background:#fff;color:var(--navy)}
+.iconbtn{background:rgba(255,255,255,.10);border:0;color:#fff;width:36px;height:36px;border-radius:9px;cursor:pointer;display:grid;place-items:center}
+.iconbtn svg{width:18px;height:18px}
+/* layout */
+.wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:236px 1fr;gap:26px;padding:22px 20px 70px}
+.side{position:sticky;top:74px;align-self:start;max-height:calc(100vh - 90px);overflow:auto}
+.side nav{display:flex;flex-direction:column;gap:2px}
+.side a{display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:10px;color:var(--muted);font-size:14.5px;text-decoration:none;border-left:3px solid transparent}
+.side a .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none}
+.side a:hover{background:#fff;color:var(--ink)}
+.side a.on{background:#fff;color:var(--ink);border-left-color:var(--energy);box-shadow:var(--shadow);font-weight:500;font-family:'Kanit'}
+.side a.on .dot{background:var(--energy)}
+.side .grp{font-size:11px;color:var(--soft);text-transform:uppercase;letter-spacing:1.4px;padding:14px 12px 6px;font-family:'Kanit'}
+.tag{font-size:10.5px;font-family:'Kanit';padding:1px 7px;border-radius:999px;background:#E8EEF6;color:var(--muted);margin-left:auto}
+.tag.staff{background:#EAE7FB;color:#5B46C9}.tag.student{background:#FFEDE3;color:#D9551F}
+/* sections */
+.main{min-width:0}
+section{margin-bottom:34px;scroll-margin-top:78px}
+.eyebrow{font-family:'Kanit';font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--energy);margin-bottom:6px}
+section>h2{font-size:23px;margin-bottom:4px}
+.lead{color:var(--muted);margin-bottom:16px;max-width:70ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:18px 20px}
+.grid{display:grid;gap:14px}
+/* hero */
+.hero{background:radial-gradient(1200px 400px at 85% -40%,rgba(255,90,44,.28),transparent),linear-gradient(120deg,#0F2238,#1B3A5B);color:#fff;border-radius:20px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:28px}
+.hero:after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border:2px solid rgba(255,255,255,.07);border-radius:50%}
+.hero:before{content:"";position:absolute;right:10px;bottom:-90px;width:300px;height:300px;border:2px solid rgba(255,255,255,.05);border-radius:50%}
+.hero .ey{color:#FFB59C;font-family:'Kanit';font-weight:600;letter-spacing:2px;font-size:12px;text-transform:uppercase}
+.hero .philo{font-family:'Kanit';font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1.1;margin:8px 0 6px;max-width:18ch}
+.hero .vh{color:#B7CCE2;font-size:14px;max-width:60ch}
+.scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px;position:relative;z-index:2}
+.score{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px}
+.score b{font-family:'Kanit';font-weight:700;font-size:30px;display:block;line-height:1}
+.score span{font-size:12px;color:#AEC4DC}
+/* PLO cards */
+.plos{grid-template-columns:repeat(2,1fr)}
+.plo{display:flex;gap:14px;padding:16px 18px;position:relative;overflow:hidden}
+.plo:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+.jersey{width:46px;height:46px;border-radius:12px;background:var(--c);color:#fff;font-family:'Kanit';font-weight:700;font-size:22px;display:grid;place-items:center;flex:none}
+.chip-d{display:inline-block;font-family:'Kanit';font-size:11.5px;font-weight:500;padding:2px 9px;border-radius:999px;background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);margin-bottom:4px}
+.plo .x b{font-family:'Kanit';font-size:15px}
+.plo .x p{font-size:14px;color:#33445A;margin-top:3px}
+/* YLO timeline */
+.season{position:relative;padding-left:34px}
+.season:before{content:"";position:absolute;left:14px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--p1),var(--teal),var(--energy))}
+.ylo{position:relative;margin-bottom:14px}
+.ylo .node{position:absolute;left:-34px;top:14px;width:30px;height:30px;border-radius:50%;background:#fff;border:3px solid var(--energy);color:var(--ink);font-family:'Kanit';font-weight:700;display:grid;place-items:center;font-size:15px}
+.ylo .yhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.ylo .yhead b{font-family:'Kanit';font-size:16px}
+.badges{display:flex;gap:5px;flex-wrap:wrap}
+.pb{width:24px;height:24px;border-radius:7px;color:#fff;font-family:'Kanit';font-weight:600;font-size:12.5px;display:grid;place-items:center}
+.assess-list{margin-top:8px;display:grid;gap:5px}
+.assess-list div{font-size:13.5px;color:#3A4A5E;padding-left:18px;position:relative}
+.assess-list div:before{content:"";position:absolute;left:3px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{background:var(--navy);color:#fff;font-family:'Kanit';font-weight:500;text-align:left;padding:9px 11px;position:sticky;top:0}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:#F7FAFD}
+.tbl .center{text-align:center}
+.scroller{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);max-height:560px}
+.dot{display:inline-block;width:13px;height:13px;border-radius:50%}
+.code{font-family:'Kanit';font-weight:500;color:var(--navy2);white-space:nowrap}
+.grouprow td{background:#EAF0F7!important;font-family:'Kanit';font-weight:500;color:var(--navy)}
+.subrow td{background:#F2F6FB!important;color:var(--muted);font-size:12.5px;font-family:'Kanit'}
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.flabel{font-family:'Kanit';font-size:12px;color:var(--soft);margin-right:2px}
+.chip{font-family:'Kanit';font-weight:500;font-size:13px;border:1.5px solid var(--line);background:#fff;color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer;user-select:none}
+.chip.on{color:#fff;border-color:transparent}
+.chip.p1.on{background:var(--p1)}.chip.p2.on{background:var(--p2)}.chip.p3.on{background:var(--p3)}.chip.p4.on{background:var(--p4)}
+.chip.yr.on{background:var(--navy)}
+.search{flex:1;min-width:170px;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-family:'Sarabun';font-size:14px;outline:none}
+.search:focus{border-color:var(--energy)}
+.count{font-family:'Kanit';font-size:13px;color:var(--muted);white-space:nowrap}
+.legend{font-size:12.5px;color:var(--muted);margin-top:8px;display:flex;gap:14px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:6px}
+/* assess levels */
+.levels{grid-template-columns:repeat(3,1fr)}
+.level h3{font-size:16px;margin-bottom:3px}
+.level .when{font-family:'Kanit';font-size:11.5px;color:var(--energy);font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.level ul{margin:9px 0 0;padding-left:0;list-style:none;display:grid;gap:6px}
+.level li{font-size:13.5px;color:#3A4A5E;padding-left:16px;position:relative}
+.level li:before{content:"›";position:absolute;left:2px;color:var(--energy);font-weight:700}
+.by{margin-top:10px;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+/* grades */
+.gradewrap{display:flex;flex-wrap:wrap;gap:9px}
+.grade{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:11px;padding:8px 12px;background:#fff;min-width:150px}
+.grade b{font-family:'Kanit';font-weight:700;font-size:18px;width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:#fff;background:var(--navy2)}
+.grade .gv{font-family:'Kanit';color:var(--energy);font-weight:600;margin-left:auto}
+.grade small{display:block;color:var(--muted);font-size:12px}
+/* tracking */
+.trk .yr{font-family:'Kanit';font-weight:700;font-size:18px;color:var(--energy)}
+.trk ul{margin:0;padding-left:16px}.trk li{font-size:13px;margin-bottom:2px}
+/* steps */
+.steps{counter-reset:s;display:grid;gap:7px}
+.steps .st{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.steps .st b{counter-increment:s;font-family:'Kanit';font-weight:700;color:#fff;background:var(--navy2);width:25px;height:25px;border-radius:7px;display:grid;place-items:center;font-size:13px;flex:none}
+.steps .st b:before{content:counter(s)}
+.steps .st span{font-size:14px}
+/* checklist */
+.checkwrap{display:grid;grid-template-columns:1fr 150px;gap:20px;align-items:start}
+.checks{display:grid;gap:9px}
+.ck{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px 14px;cursor:pointer;transition:border-color .15s,background .15s}
+.ck:hover{border-color:var(--teal)}
+.ck.done{background:#F1FBF8;border-color:#BEE9DF}
+.box{width:24px;height:24px;border-radius:7px;border:2px solid var(--line);flex:none;display:grid;place-items:center;margin-top:1px}
+.ck.done .box{background:var(--teal);border-color:var(--teal)}
+.box svg{width:14px;height:14px;opacity:0;color:#fff}
+.ck.done .box svg{opacity:1}
+.ck span{font-size:14.5px}
+.ck.done span{color:var(--muted)}
+.ringcard{position:sticky;top:80px;text-align:center;padding:18px}
+.ring{width:118px;height:118px;margin:0 auto 6px}
+.ring text{font-family:'Kanit';font-weight:700}
+.ringcard p{font-size:13px;color:var(--muted)}
+.reset{margin-top:10px;font-family:'Kanit';font-size:12.5px;color:var(--energy);background:none;border:0;cursor:pointer;text-decoration:underline}
+/* two-col cards */
+.kv{width:100%;border-collapse:collapse;font-size:14px}
+.kv td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+.kv tr td:first-child{font-family:'Kanit';font-weight:500;color:var(--navy);width:34%}
+.kv tr:last-child td{border-bottom:0}
+.note{font-size:13px;color:var(--muted);background:#F4F7FB;border-left:3px solid var(--energy);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:14px}
+.foot{max-width:1200px;margin:0 auto;padding:22px 20px 40px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line)}
+.hide{display:none!important}
+/* responsive */
+@media(max-width:900px){
+ .wrap{grid-template-columns:1fr;gap:0;padding:0 0 60px}
+ .side{position:sticky;top:58px;max-height:none;background:var(--paper);z-index:30;padding:8px 12px;border-bottom:1px solid var(--line)}
+ .side nav{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:2px}
+ .side .grp{display:none}
+ .side a{white-space:nowrap;border-left:0;border-bottom:3px solid transparent;border-radius:8px;padding:7px 11px}
+ .side a.on{border-left:0;border-bottom-color:var(--energy)}
+ .side a .tag{display:none}
+ .main{padding:18px 16px}
+ .hero{padding:24px 20px}
+ .plos,.levels{grid-template-columns:1fr}
+ .scoreboard{grid-template-columns:repeat(2,1fr)}
+ .checkwrap{grid-template-columns:1fr}.ringcard{position:static}
+ .brand .t span{display:none}
+}
+@media print{
+ .topbar,.side,.iconbtn,.reset,.filters{display:none!important}
+ .wrap{grid-template-columns:1fr;display:block}
+ .hide{display:block!important}
+ section{page-break-inside:avoid}.scroller{max-height:none}
+ body{background:#fff}
+}
+
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+ <div class="brand">
+   <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg></div>
+   <div class="t"><b>สื่อสารการกีฬา · มกช. กรุงเทพ</b><span>คู่มือการวัดและประเมินผล & YLOs/PLOs Tracking Plan</span></div>
+ </div>
+ <div class="spacer"></div>
+ <div class="seg" id="seg">
+   <button class="on" data-aud="all">ทั้งหมด</button>
+   <button data-aud="student">นักศึกษา</button>
+   <button data-aud="staff">อาจารย์</button>
+ </div>
+ <button class="iconbtn" id="print" title="พิมพ์ / บันทึก PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg></button>
+</div></header>
+
+<div class="wrap">
+ <aside class="side"><nav id="nav"></nav></aside>
+ <main class="main" id="main"></main>
+</div>
+
+<script id="data" type="application/json">{"meta": {"title": "หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสื่อสารการกีฬา", "sub": "คู่มือการวัดและประเมินผล และแผนติดตามผลลัพธ์การเรียนรู้ (YLOs/PLOs Tracking Plan)", "ver": "หลักสูตรปรับปรุง พ.ศ. 2568 · คณะศิลปศาสตร์ มหาวิทยาลัยการกีฬาแห่งชาติ วิทยาเขตกรุงเทพ", "philosophy": "สร้างสรรค์และพัฒนา สื่อสารการกีฬาสู่สากล", "stats": [["123", "หน่วยกิตตลอดหลักสูตร"], ["4", "ปีการศึกษา"], ["4", "ผลลัพธ์การเรียนรู้ (PLOs)"], ["112", "รายวิชาในแผนที่หลักสูตร"]]}, "plos": [{"id": 1, "domain": "ความรู้", "text": "ประยุกต์ใช้องค์ความรู้ด้านการสื่อสาร การจัดการการสื่อสารและนวัตกรรมการสื่อสาร ด้านการกีฬาและอุตสาหกรรมกีฬา เพื่อปฏิบัติงานและวางแผนการสื่อสารในรูปแบบต่าง ๆ ที่เหมาะสมกับกลุ่มเป้าหมายในอาชีพต่าง ๆ ในอุตสาหกรรมการกีฬาได้"}, {"id": 2, "domain": "ทักษะ", "text": "ใช้ภาษาในการสื่อสาร สนทนา อ่านและเขียนภาษาอังกฤษ เพื่อปฏิบัติงานในอาชีพต่าง ๆ ในอุตสาหกรรมการกีฬาได้อย่างเหมาะสม"}, {"id": 3, "domain": "ทักษะ", "text": "สร้างสรรค์เนื้อหา ผลิตสื่อและเลือกใช้สื่อที่เหมาะสม วางแผนและออกแบบโครงการ กิจกรรม หรือนวัตกรรม เพื่อการสื่อสารแบบบูรณาการที่เหมาะสมกับเป้าหมาย รวมถึงแก้ไขปัญหาทางการสื่อสารขององค์กรในอุตสาหกรรมกีฬา"}, {"id": 4, "domain": "จริยธรรม/ลักษณะบุคคล", "text": "แสดงออกถึงความรู้เท่าทันสื่อ ตรวจสอบและวิเคราะห์สื่อเพื่อป้องกันผลกระทบด้านลบต่อสังคม เคารพกฎระเบียบ มีความรับผิดชอบต่อสังคม และยึดมั่นในจรรยาบรรณวิชาชีพบุคลากรการกีฬา"}], "ylos": [{"year": 1, "text": "มีความรู้เบื้องต้นด้านการสื่อสาร การผลิตสื่อ การตลาด อุตสาหกรรมกีฬา และทักษะการสื่อสารภาษาอังกฤษ มีความเข้าใจด้านนวัตกรรมและการสื่อสาร และมีกระบวนการคิดที่เป็นระบบ", "plos": [1, 2, 4], "assess": ["วัดผลด้วยคะแนนประเมินรายวิชาจากนักศึกษา", "วัดผลจากผลลัพธ์การเรียนรู้ของทุกรายวิชาในชั้นปี"]}, {"year": 2, "text": "มีทักษะการออกแบบและผลิตสื่อ ความรู้ด้านกีฬาและเทคโนโลยีการสื่อสาร สื่อสารการตลาด ใช้เทคโนโลยีออกแบบเนื้อหา เข้าใจกระบวนการทำงานในวิชาชีพและจริยธรรม จรรยาบรรณ ความรับผิดชอบต่อสังคม", "plos": [1, 2, 3, 4], "assess": ["วัดผลด้วยคะแนนประเมินรายวิชาจากนักศึกษา", "วัดผลจากผลลัพธ์การเรียนรู้ของทุกรายวิชาในชั้นปี", "พิจารณาการบรรลุรายด้าน 4 ด้าน จากข้อสะท้อนของอาจารย์ผู้สอน"]}, {"year": 3, "text": "มีทักษะการคิดแบบผู้ประกอบการ ประยุกต์ใช้ความรู้ด้านการสื่อสาร กีฬา เทคโนโลยีการสื่อสาร และทักษะการผลิตสื่อ ในการบริหารการสื่อสารในอุตสาหกรรมการกีฬา", "plos": [2, 3, 4], "assess": ["วัดผลด้วยคะแนนประเมินรายวิชาจากนักศึกษา", "วัดผลจากผลลัพธ์การเรียนรู้ของทุกรายวิชาในชั้นปี", "พิจารณาการบรรลุรายด้าน 4 ด้าน จากข้อสะท้อนของอาจารย์ผู้สอน"]}, {"year": 4, "text": "ประยุกต์ใช้และบูรณาการองค์ความรู้ในศาสตร์ที่เกี่ยวข้องในการออกแบบโครงการ พัฒนากิจกรรมหรือนวัตกรรม เพื่อการสื่อสารแบบบูรณาการที่เหมาะสมกับเป้าหมายขององค์กรในอุตสาหกรรมกีฬา", "plos": [2, 3, 4], "assess": ["วัดผลด้วยคะแนนประเมินรายวิชาจากนักศึกษา", "ประเมินผลโดยพี่เลี้ยงในสถานประกอบการที่ฝึกประสบการณ์วิชาชีพ (แบบประเมินที่ผ่านการวิพากษ์)", "สอบประมวลความรู้ (Comprehensive Exam) / Exit Exam ด้วยข้อสอบที่ผ่านการวิพากษ์จากผู้สอนและผู้ทรงคุณวุฒิภายนอก"]}], "structure": [["1. หมวดวิชาศึกษาทั่วไป", "ไม่น้อยกว่า 24"], ["    1.1 กลุ่มวิชาทักษะภาษาและการสื่อสาร", "ไม่น้อยกว่า 9"], ["    1.2 กลุ่มวิชาการพัฒนาตนเองและการใช้ชีวิตในสังคม", "ไม่น้อยกว่า 6"], ["    1.3 กลุ่มวิชาการคิดและรู้เท่าทันการเปลี่ยนแปลงในยุคดิจิทัล", "ไม่น้อยกว่า 9"], ["2. หมวดวิชาเฉพาะ", "ไม่น้อยกว่า 93"], ["    2.1 วิชาพื้นฐานวิชาชีพ", "24"], ["    2.2 วิชาเฉพาะด้าน (บังคับ 30 / เลือก 30)", "ไม่น้อยกว่า 60"], ["    2.3 วิชาฝึกประสบการณ์วิชาชีพ", "9"], ["3. หมวดวิชาเลือกเสรี", "ไม่น้อยกว่า 6"]], "assessLevels": [{"k": "รายวิชา (CLOs)", "scope": "ประเมินทุกรายวิชาที่เปิดสอนในแต่ละภาคการศึกษา ให้สอดคล้องกับ YLOs และ PLOs", "when": "สิ้นภาคการศึกษา", "how": ["ประเมินระหว่างทาง: แบบทดสอบ การนำเสนอ รายงาน การปฏิบัติ การเข้าเรียน ความตรงต่อเวลา การประเมินเพื่อนประเมินเพื่อน โดยใช้แบบประเมินที่ผ่านการวิพากษ์ และ/หรือ rubric score", "สอบปลายภาคด้วยข้อสอบที่ผ่านการวิพากษ์ หรือชิ้นงาน/โครงงาน"], "by": "อาจารย์ผู้สอน · คณะกรรมการบริหารหลักสูตร · นักศึกษา"}, {"k": "ชั้นปี (YLOs)", "scope": "ประเมินการบรรลุผลลัพธ์การเรียนรู้รายชั้นปี โดยรวมผลจากทุกรายวิชาในชั้นปี", "when": "สิ้นภาคการศึกษา และสิ้นปีการศึกษา", "how": ["วัดด้วยคะแนนประเมินรายวิชาจากนักศึกษา", "วัดจากผลลัพธ์การเรียนรู้ของทุกรายวิชาในชั้นปี", "พิจารณาการบรรลุรายด้าน 4 ด้าน (ชั้นปี 2–4) และการประเมินจากพี่เลี้ยง/สอบประมวลความรู้ (ชั้นปี 4)"], "by": "อาจารย์ผู้สอน · คณะกรรมการบริหารหลักสูตร · นักศึกษา · พี่เลี้ยงในสถานประกอบการ (ปี 4)"}, {"k": "หลักสูตร (PLOs)", "scope": "ประเมินการบรรลุผลลัพธ์การเรียนรู้ตลอดหลักสูตรทั้ง 4 ด้าน โดยผู้มีส่วนได้ส่วนเสีย", "when": "จบหลักสูตร", "how": ["ข้อเสนอแนะจากนักศึกษาหลังเรียนรู้ควบคู่การทำงาน (WBL) และฝึกประสบการณ์วิชาชีพ", "การประเมินโดยสถานประกอบการ", "สอบประมวลความรู้ด้านสื่อสารการกีฬา ด้วยข้อสอบที่ผ่านการวิพากษ์จากผู้สอน คณะกรรมการประจำหลักสูตร และผู้ทรงคุณวุฒิภายนอก"], "by": "บัณฑิต · นายจ้าง/ผู้ใช้บัณฑิต · คณะกรรมการบริหารหลักสูตร"}], "grades": [["A", "ดีเยี่ยม (Excellent)", "4.0"], ["B+", "ดีมาก (Very Good)", "3.5"], ["B", "ดี (Good)", "3.0"], ["C+", "ดีพอใช้ (Fairly Good)", "2.5"], ["C", "พอใช้ (Fair)", "2.0"], ["D+", "อ่อน (Poor)", "1.5"], ["D", "อ่อนมาก (Very Poor)", "1.0"], ["F", "ตก (Fail)", "0.0"]], "track": [{"year": 1, "plos": [1, 2, 4], "tools": ["คะแนนประเมินรายวิชา (CLOs) ของทุกรายวิชาในชั้นปี", "แบบประเมิน/ข้อสอบที่ผ่านการวิพากษ์ และ rubric score", "แบบประเมินรายวิชาจากนักศึกษา"], "by": "อาจารย์ผู้สอน · คกก.บริหารหลักสูตร · นักศึกษา", "when": "สิ้นภาค/สิ้นปีการศึกษา"}, {"year": 2, "plos": [1, 2, 3, 4], "tools": ["คะแนนประเมินรายวิชา (CLOs) ของทุกรายวิชาในชั้นปี", "แบบประเมินรายวิชาจากนักศึกษา", "พิจารณาการบรรลุรายด้าน 4 ด้าน จากข้อสะท้อนของอาจารย์ผู้สอน"], "by": "อาจารย์ผู้สอน · คกก.บริหารหลักสูตร · นักศึกษา", "when": "สิ้นภาค/สิ้นปีการศึกษา"}, {"year": 3, "plos": [2, 3, 4], "tools": ["คะแนนประเมินรายวิชา (CLOs) ของทุกรายวิชาในชั้นปี", "แบบประเมินรายวิชาจากนักศึกษา", "พิจารณาการบรรลุรายด้าน 4 ด้าน จากข้อสะท้อนของอาจารย์ผู้สอน"], "by": "อาจารย์ผู้สอน · คกก.บริหารหลักสูตร · นักศึกษา", "when": "สิ้นภาค/สิ้นปีการศึกษา"}, {"year": 4, "plos": [2, 3, 4], "tools": ["คะแนนประเมินรายวิชา (CLOs)", "แบบประเมินจากพี่เลี้ยงในสถานประกอบการ (ฝึกประสบการณ์/WBL)", "สอบประมวลความรู้ (Comprehensive Exam) / Exit Exam"], "by": "อาจารย์ผู้สอน · คกก.บริหารหลักสูตร · นักศึกษา · พี่เลี้ยง", "when": "สิ้นภาค/สิ้นปี/จบหลักสูตร"}], "targets": [["รายวิชา (CLOs)", "ร้อยละ 100 ของรายวิชาที่เปิดสอนมีการประเมินครบถ้วนตาม Curriculum Mapping", "วิธีประเมินครบทุกด้าน เที่ยงตรง โปร่งใส ตรวจสอบได้"], ["ชั้นปี (YLOs)", "นักศึกษาผ่านเกณฑ์การบรรลุ YLO รายด้านในระดับดีขึ้นไป (หลักสูตรกำหนด)", "ครอบคลุมผลลัพธ์การเรียนรู้ทั้ง 4 ด้านของชั้นปี"], ["หลักสูตร (PLOs)", "บรรลุ PLOs ครบ 4 ด้าน และผ่านสอบประมวลความรู้/Exit Exam", "สมรรถนะตรงความต้องการผู้ใช้บัณฑิตและมาตรฐานคุณวุฒิ พ.ศ. 2565"]], "verification": {"grade": ["พิจารณาความสอดคล้องของคะแนนระหว่างเรียนและคะแนนรวบยอดที่ใช้ตัดเกรด", "นำเสนอผลการเรียนต่อที่ประชุมหลักสูตรและคณะเพื่อตรวจสอบความถูกต้อง"], "gradeTarget": "เป้าหมาย: ร้อยละ 100 ของรายวิชารายงานผลถูกต้อง · ผลการเรียนเที่ยงตรง โปร่งใส ตรวจสอบได้", "achieve": "ทวนสอบผลสัมฤทธิ์อย่างน้อยร้อยละ 25 ของรายวิชาที่เปิดสอนในแต่ละปีการศึกษา โดยมีคะแนนทวนสอบเฉลี่ยระดับดีขึ้นไป", "course": "ระดับรายวิชา: ประเมินความสอดคล้องกับ Curriculum Mapping สุ่มตรวจการให้คะแนน สุ่มชิ้นงาน/ข้อสอบ สุ่มสัมภาษณ์นักศึกษาและอาจารย์ และพิจารณารายงานการประเมินจากสถานประกอบการ", "prog": "ระดับหลักสูตร: ทวนสอบภาพรวมการใช้หลักสูตรเป็นระยะ จัดทำแผน/ปฏิทิน/ขั้นตอน รวบรวมข้อมูลจากผู้สอน ผู้เรียน บัณฑิต ผู้ใช้บัณฑิต และผู้ทรงคุณวุฒิ ผ่านแบบสอบถาม สัมภาษณ์ การได้งานทำ ความพึงพอใจ Exit Exam และ Comprehensive Exam"}, "examSteps": ["เตรียมความพร้อมและออกข้อสอบตามแผน อย่างน้อย 3 เท่าของที่ใช้จริง", "ประกาศกำหนดการสอบให้นักศึกษาและคณาจารย์ทราบ", "เตรียมความพร้อมนักศึกษาในหลักสูตร", "ส่งข้อสอบให้คณะกรรมการคุณภาพบัณฑิต", "พิจารณาโครงสร้างข้อสอบเบื้องต้นตามแต่ละระดับ", "ปรับปรุงข้อสอบเบื้องต้นตามโครงสร้าง", "ผู้ทรงคุณวุฒิ/ผู้เชี่ยวชาญพิจารณาข้อสอบ", "หลักสูตร/คณาจารย์ปรับข้อสอบตามคำแนะนำ", "คณะกรรมการบริหารคณะพิจารณา", "จัดทำคู่มือการสอบประมวลความรู้", "ผลิตข้อสอบ", "สอบประมวลความรู้ของหลักสูตร", "ตรวจข้อสอบ", "วิเคราะห์ข้อสอบ", "สรุปและรายงานผลต่อคณะกรรมการบริหารคณะ"], "grad": ["เรียนครบหน่วยกิตตามโครงสร้างหลักสูตร (ไม่น้อยกว่า 123 หน่วยกิต) และได้คะแนนเฉลี่ยสะสมไม่ต่ำกว่า 2.00", "บรรลุผลลัพธ์การเรียนรู้ตามมาตรฐานคุณวุฒิระดับปริญญาตรีที่หลักสูตรกำหนด", "ผ่านการสอบวัดความสามารถภาษาอังกฤษ TNSU English Test", "มีค่าคะแนนความดีจากกิจกรรมพัฒนานักศึกษา “บัณฑิตคนดี” ตามเกณฑ์มหาวิทยาลัย", "เป็นไปตามระเบียบ มกช. ว่าด้วยการจัดการศึกษาระดับปริญญาตรี พ.ศ. 2568 และเกณฑ์มาตรฐานหลักสูตรระดับปริญญาตรี พ.ศ. 2565"], "roles": [["อาจารย์ผู้สอน", "ออกแบบ CLOs กิจกรรมการเรียนรู้ และเครื่องมือวัดประเมินให้สอดคล้องกับ YLOs/PLOs ดำเนินการประเมินและรายงานผลรายวิชา"], ["คณะกรรมการบริหารหลักสูตร", "กำกับความสอดคล้องของการประเมิน 3 ระดับ วิพากษ์เครื่องมือ/ข้อสอบ ทวนสอบ และสรุปผลการบรรลุ YLOs/PLOs"], ["ประธานหลักสูตร", "บริหารแผนการวัดและประเมิน จัดทำปฏิทิน ติดตามการรายงานผล และนำผลสู่การปรับปรุงตาม PDCA"], ["คณะ/คณะกรรมการประจำคณะ", "ตรวจสอบและรับรองผลการเรียน พิจารณาผลการทวนสอบและการสอบประมวลความรู้"], ["ผู้ทรงคุณวุฒิ/ผู้ใช้บัณฑิต/ศิษย์เก่า", "ร่วมวิพากษ์ข้อสอบ ประเมินการบรรลุ PLOs และสะท้อนสมรรถนะของบัณฑิต"]], "calendar": [["ก่อนเปิดภาคการศึกษา", "เตรียมความพร้อมรายวิชา แจ้งวิธีวัดและประเมินผลแก่นักศึกษา วิพากษ์เครื่องมือ/ข้อสอบ/rubric"], ["ระหว่างภาคการศึกษา", "ประเมินระหว่างทาง (Formative) ติดตามและรายงานผลกลางภาค"], ["สิ้นภาคการศึกษา", "ประเมินรวบยอด (Summative) รายงานผล CLOs ทวนสอบผลการเรียน นำเสนอผลต่อที่ประชุมหลักสูตรและคณะ"], ["สิ้นปีการศึกษา", "สรุปการบรรลุ YLOs ทวนสอบผลสัมฤทธิ์ (≥25% ของรายวิชา) จัดทำแผนพัฒนา"], ["เมื่อจบหลักสูตร", "ประเมินการบรรลุ PLOs สอบประมวลความรู้/Exit Exam ประเมินโดยผู้ใช้บัณฑิต สรุปผลปรับปรุงหลักสูตร"]], "mapItems": [{"t": "h", "text": "1. หมวดวิชาศึกษาทั่วไป"}, {"t": "h", "text": "1.1 กลุ่มวิชาทักษะภาษาและการสื่อสาร"}, {"t": "h", "text": "1.1.1 วิชาบังคับ"}, {"t": "c", "code": "มศ 041017", "name": "ภาษาไทยเพื่อการสื่อสารในศตวรรษที่ 21", "year": "1", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.1 วิชาบังคับ"}, {"t": "c", "code": "มศ 051065", "name": "ภาษาอังกฤษเพื่อการสื่อสารในสังคมโลก", "year": "1", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.1 วิชาบังคับ"}, {"t": "h", "text": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 041018", "name": "วาทการ", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 042019", "name": "มุมมองภาษาจากวรรณกรรม", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 042020", "name": "การเขียนเพื่อพัฒนาอาชีพ", "year": "2", "p": [0, 1, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052066", "name": "หลักการใช้ภาษาอังกฤษ", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052067", "name": "ภาษาอังกฤษสำหรับการกีฬา", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052068", "name": "ภาษาอังกฤษสำหรับการนำเสนออย่างสร้างสรรค์", "year": "2", "p": [0, 1, 1, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052069", "name": "ภาษาอังกฤษเพื่อการเรียนรู้ด้วยตนเอง", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052070", "name": "ภาษาอังกฤษผ่านสื่อบันเทิง", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052071", "name": "การอ่านภาษาอังกฤษเพื่อความบันเทิง", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052072", "name": "ภาษาอังกฤษสำหรับการเขียนในชีวิตประจำวัน", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052073", "name": "ภาษาอังกฤษเพื่อการสมัครงาน", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 052074", "name": "ภาษาอังกฤษเพื่อการเตรียมตัวสอบ", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 072019", "name": "ภาษาจีนเพื่อการสื่อสาร", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 082004", "name": "ภาษามลายูเพื่อการสื่อสาร", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "c", "code": "มศ 092005", "name": "ภาษาฝรั่งเศสเพื่อการสื่อสาร", "year": "2", "p": [0, 1, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.1.2 วิชาเลือก"}, {"t": "h", "text": "1.2 กลุ่มวิชาการพัฒนาตนเองและการใช้ชีวิตในสังคม"}, {"t": "h", "text": "1.2.1 วิชาบังคับ"}, {"t": "c", "code": "สศ 021011", "name": "คนกีฬาสู่วิถีพลเมืองสร้างสรรค์", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.1 วิชาบังคับ"}, {"t": "h", "text": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 001005", "name": "สมดุลชีวิต", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 001007", "name": "ความสุขและคุณค่าของชีวิต", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 021012", "name": "พลวัตทางการกีฬา", "year": "1", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 021013", "name": "วัยรุ่นสร้างตัว", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 021014", "name": "อาเซียนกับสังคมโลก", "year": "1", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 021015", "name": "การเป็นผู้ประกอบการสมัยใหม่", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 041003", "name": "กฎหมายน่ารู้สำหรับชีวิต", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 051005", "name": "เศรษฐศาสตร์เพื่อการดำเนินชีวิตที่ดี", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "c", "code": "สศ 081001", "name": "สารสนเทศเพื่อการศึกษาค้นคว้า", "year": "1", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.2.2 วิชาเลือก"}, {"t": "h", "text": "1.3 กลุ่มวิชาการคิดและรู้เท่าทันการเปลี่ยนแปลงในยุคดิจิทัล"}, {"t": "h", "text": "1.3.1 หมู่วิชาคณิตศาสตร์กับการคิด"}, {"t": "c", "code": "วท 091009", "name": "การคิดและการตัดสินใจ", "year": "1", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.1 หมู่วิชาคณิตศาสตร์กับการคิด"}, {"t": "c", "code": "วท 091010", "name": "คณิตศาสตร์ในชีวิตประจำวัน", "year": "1", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.1 หมู่วิชาคณิตศาสตร์กับการคิด"}, {"t": "c", "code": "วท 101011", "name": "สถิติในชีวิตประจำวัน", "year": "1", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.1 หมู่วิชาคณิตศาสตร์กับการคิด"}, {"t": "h", "text": "1.3.2 หมู่วิชาวิทยาศาสตร์กับการรู้เท่าทันการเปลี่ยนแปลง"}, {"t": "c", "code": "วท 051003", "name": "วิทยาศาสตร์ในโลกอนาคต", "year": "2", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.2 หมู่วิชาวิทยาศาสตร์กับการรู้เท่าทันการเปลี่ยนแปลง"}, {"t": "c", "code": "วท 051004", "name": "วิทยาศาสตร์กับวิถีชีวิตใหม่", "year": "2", "p": [1, 0, 0, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.2 หมู่วิชาวิทยาศาสตร์กับการรู้เท่าทันการเปลี่ยนแปลง"}, {"t": "c", "code": "วท 061006", "name": "รักษ์สิ่งแวดล้อม", "year": "2", "p": [1, 0, 0, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.2 หมู่วิชาวิทยาศาสตร์กับการรู้เท่าทันการเปลี่ยนแปลง"}, {"t": "h", "text": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 111020", "name": "ทักษะความเป็นพลเมืองดิจิทัล", "year": "2", "p": [0, 0, 1, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 112021", "name": "การสร้างและการประยุกต์ใช้สื่อดิจิทัล", "year": "2", "p": [0, 0, 1, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 111022", "name": "การประยุกต์ใช้เครื่องมือดิจิทัลในชีวิตประจำวัน", "year": "2", "p": [0, 0, 1, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 111023", "name": "การจัดการเอกสารด้วยซอฟต์แวร์ประมวลผลคำ", "year": "2", "p": [0, 0, 1, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 111024", "name": "การใช้ซอฟต์แวร์ตารางคำนวณเพื่อการวิเคราะห์ข้อมูล", "year": "2", "p": [0, 0, 1, 0], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "c", "code": "วท 111025", "name": "การใช้ซอฟต์แวร์ออกแบบการนำเสนออย่างมีประสิทธิภาพ", "year": "2", "p": [0, 0, 1, 1], "cat": "1. หมวดวิชาศึกษาทั่วไป", "grp": "1.3.3 หมู่วิชาเทคโนโลยีดิจิทัล"}, {"t": "h", "text": "2. หมวดวิชาเฉพาะด้าน"}, {"t": "h", "text": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 011064", "name": "หลักและทฤษฎีการสื่อสาร", "year": "1", "p": [1, 0, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 041068", "name": "การออกแบบภาพและเสียงในสื่อดิจิทัล", "year": "1", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 061036", "name": "การถ่ายภาพเพื่อการสื่อสาร", "year": "1", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 091062", "name": "ทักษะการใช้โปรแกรมสำเร็จรูปในการผลิตสื่อทางการกีฬา", "year": "1", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 012065", "name": "กฎหมายและจริยธรรมเพื่องานสื่อสารการกีฬา", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 022044", "name": "การสื่อข่าวและการรายงานข่าวกีฬา", "year": "2", "p": [1, 1, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "นศ 042069", "name": "การถ่ายภาพเคลื่อนไหว การตัดต่อลำดับภาพและเสียงเพื่องานสื่อสารการกีฬา", "year": "2", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "c", "code": "พล 011265", "name": "ความรู้พื้นฐานเกี่ยวกับการกีฬา", "year": "1", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.1 วิชาพื้นฐานวิชาชีพ"}, {"t": "h", "text": "2.2 วิชาเฉพาะด้าน"}, {"t": "h", "text": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "นศ 094080", "name": "การสร้างสรรค์นวัตกรรมสื่อในอุตสาหกรรมกีฬา", "year": "3", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "บธ 071108", "name": "การเป็นผู้ประกอบการในตลาดดิจิทัล", "year": "1", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "นศ 093074", "name": "การบริหารการสื่อสารในอุตสาหกรรมกีฬา", "year": "3", "p": [1, 1, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "นศ 023039", "name": "การเขียนสร้างสรรค์เพื่อการสื่อสารการกีฬา", "year": "2", "p": [1, 1, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "นศ 013039", "name": "การวิจัยสื่อสารการกีฬา", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "พล 013183", "name": "องค์การทางการกีฬาและการจัดการแข่งขัน", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "นศ 011072", "name": "การรู้เท่าทันสื่อและวิเคราะห์สถานการณ์ทางสังคม", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "มศ 051089", "name": "พัฒนาทักษะการฟังและการพูดภาษาอังกฤษเพื่องานสื่อสารการกีฬา", "year": "1", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "มศ 052090", "name": "พัฒนาทักษะการอ่านและการเขียนภาษาอังกฤษเพื่องานสื่อสารการกีฬา", "year": "2", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "c", "code": "มศ 053093", "name": "การประยุกต์ใช้ภาษาอังกฤษในอุตสาหกรรมกีฬา", "year": "4", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.2.1 วิชาบังคับ"}, {"t": "h", "text": "2.2.2 วิชาเลือก"}, {"t": "h", "text": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012081", "name": "ความคิดสร้างสรรค์และการคิดเชิงวิพากษ์", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012082", "name": "การสื่อสารเชิงกลยุทธ์", "year": "2", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 011079", "name": "การสื่อสารการตลาด", "year": "1", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 013088", "name": "การสร้างแบรนด์องค์กร", "year": "3", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012083", "name": "การพัฒนาบุคลิกภาพสำหรับอินฟลูเอนเซอร์", "year": "2", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 092072", "name": "ผู้ประกาศกีฬา", "year": "2", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 062025", "name": "การถ่ายภาพกีฬา", "year": "2", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 063039", "name": "การถ่ายภาพแฟชั่นกีฬา", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 092073", "name": "การวิเคราะห์ข้อมูลและการแสดงผลด้วยภาพเพื่อสื่อกีฬา", "year": "2", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 054030", "name": "การรณรงค์การสื่อสารสำหรับอุตสาหกรรมการกีฬา", "year": "4", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012084", "name": "การเล่าเรื่องในแพลตฟอร์มออนไลน์", "year": "2", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012085", "name": "การจัดการช่องทางการสื่อสาร", "year": "2", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 032046", "name": "การประชาสัมพันธ์และสื่อมวลชนสัมพันธ์", "year": "2", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093075", "name": "การสื่อสารกับแฟนกีฬา", "year": "3", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093076", "name": "วิเคราะห์สถานการณ์ปัจจุบันในอุตสาหกรรมกีฬา", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093077", "name": "การสื่อสารในภาวะวิกฤตขององค์ทางการกีฬา", "year": "3", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093078", "name": "การสื่อสารเพื่อบริหารความสัมพันธ์ในอุตสาหกรรมกีฬา", "year": "3", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093028", "name": "การบริหารกิจการและการเป็นผู้ประกอบการสื่อกีฬา", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 032045", "name": "การเขียนและการสร้างสรรค์เนื้อหาเพื่อการประชาสัมพันธ์", "year": "2", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 012086", "name": "การสร้างสรรค์เนื้อหาผ่านสื่อออนไลน์", "year": "2", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093045", "name": "กิจกรรมทางการตลาดเพื่อการกีฬา", "year": "3", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 093029", "name": "การสื่อสารการตลาดแบบบูรณาการเพื่ออุตสาหกรรมการกีฬา", "year": "3", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 084011", "name": "การสัมมนาทางการสื่อสารการกีฬา", "year": "4", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "นศ 011080", "name": "การสื่อสารเพื่อคุ้มครองผู้บริโภค", "year": "1", "p": [1, 1, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "มศ 053091", "name": "การอ่านภาษาอังกฤษสำหรับวิชาชีพสื่อสารการกีฬา", "year": "3", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "c", "code": "มศ 053092", "name": "การเขียนภาษาอังกฤษสำหรับวิชาชีพสื่อสารการกีฬา", "year": "3", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการสื่อสาร"}, {"t": "h", "text": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 043044", "name": "การผลิตรายการกีฬาและการนำเสนอผ่านสื่อสังคมออนไลน์", "year": "3", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 093079", "name": "การผลิตข่าวสารทางการกีฬา", "year": "3", "p": [1, 1, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 051027", "name": "การสร้างสรรค์และผลิตงานโฆษณาทางการกีฬา", "year": "1", "p": [1, 0, 1, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 043045", "name": "การเขียนบทเพื่อการสื่อสารผ่านสื่อดิจิทัล", "year": "3", "p": [1, 1, 0, 0], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 042040", "name": "การตัดต่อลำดับภาพและเสียงเพื่องานสื่อสารการกีฬา", "year": "2", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 093023", "name": "การออกแบบภาพประกอบและอินโฟกราฟิก", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 053029", "name": "การออกแบบผลิตภัณฑ์ส่งเสริมการขายทางกีฬา", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 013088", "name": "การสร้างสรรค์และผลิตสื่อสตรีมมิ่ง", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "c", "code": "นศ 094034", "name": "โครงงานพิเศษทางการสื่อสารการกีฬา", "year": "4", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านการผลิตสื่อ"}, {"t": "h", "text": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 063048", "name": "การจัดการเชิงกลยุทธ์", "year": "3", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 061047", "name": "องค์การและการจัดการสมัยใหม่", "year": "1", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 062046", "name": "การจัดการทรัพยากรมนุษย์", "year": "2", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 041014", "name": "การตลาดในยุคดิจิทัล", "year": "1", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 002026", "name": "พฤติกรรมผู้บริโภค", "year": "2", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "c", "code": "บธ 064059", "name": "การบริหารลูกค้าสัมพันธ์", "year": "4", "p": [1, 0, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านบริหารธุรกิจ"}, {"t": "h", "text": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 032596", "name": "ทักษะกีฬาว่ายน้ำ", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 032640", "name": "กีฬาอีสปอร์ต", "year": "3", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 032641", "name": "กีฬายิงธนู", "year": "3", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 032642", "name": "กีฬามวยสากล", "year": "3", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 032643", "name": "กีฬาปันจักสีลัต", "year": "3", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 042404", "name": "กีฬาเบสบอล", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 042405", "name": "กีฬาจานร่อน", "year": "2", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 042406", "name": "กีฬาเรือพาย", "year": "4", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 042407", "name": "กีฬาฮอกกี้", "year": "4", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 051324", "name": "กีฬาต่อสู้", "year": "1", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 051328", "name": "กีฬาประเภททีม", "year": "1", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "c", "code": "พล 051329", "name": "กีฬาประเภทบุคคล", "year": "1", "p": [1, 0, 0, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "กลุ่มวิชาด้านกีฬา"}, {"t": "h", "text": "2.3 วิชาฝึกประสบการณ์วิชาชีพ"}, {"t": "c", "code": "นศ 084014", "name": "การเตรียมฝึกประสบการณ์วิชาชีพสื่อสารการกีฬา", "year": "4", "p": [1, 1, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.3 วิชาฝึกประสบการณ์วิชาชีพ"}, {"t": "c", "code": "นศ 084026", "name": "การฝึกประสบการณ์วิชาชีพสื่อสารการกีฬา", "year": "4", "p": [1, 1, 1, 1], "cat": "2. หมวดวิชาเฉพาะด้าน", "grp": "2.3 วิชาฝึกประสบการณ์วิชาชีพ"}]}</script>
+<script>
+window.DATA = JSON.parse(document.getElementById('data').textContent);
+const D = window.DATA;
+const PC = ['var(--p1)','var(--p2)','var(--p3)','var(--p4)'];
+const el = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstElementChild;};
+const esc = (s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+const SECTIONS = [
+ {id:'overview',label:'ภาพรวมหลักสูตร',grp:'หลักสูตร'},
+ {id:'plos',label:'ผลลัพธ์การเรียนรู้ (PLOs)'},
+ {id:'ylos',label:'YLOs รายชั้นปี'},
+ {id:'map',label:'แผนที่หลักสูตร (Mapping)'},
+ {id:'assess',label:'ระบบการวัดและประเมิน',grp:'การประเมินผล'},
+ {id:'grades',label:'เกณฑ์การให้คะแนน'},
+ {id:'track',label:'Tracking Plan (YLOs/PLOs)'},
+ {id:'grad',label:'เกณฑ์การสำเร็จการศึกษา',tag:'student'},
+ {id:'verify',label:'การทวนสอบ & สอบประมวลความรู้',tag:'staff',grp:'สำหรับอาจารย์'},
+ {id:'roles',label:'บทบาทหน้าที่ & ปฏิทิน',tag:'staff'},
+];
+
+/* ---------- sidebar ---------- */
+const nav = document.getElementById('nav');
+SECTIONS.forEach(s=>{
+ if(s.grp) nav.appendChild(el(`<div class="grp">${s.grp}</div>`));
+ const tag = s.tag?`<span class="tag ${s.tag}">${s.tag==='staff'?'อาจารย์':'นักศึกษา'}</span>`:'';
+ nav.appendChild(el(`<a href="#${s.id}" data-nav="${s.id}" data-tag="${s.tag||'all'}"><span class="dot"></span><span>${s.label}</span>${tag}</a>`));
+});
+
+/* ---------- render ---------- */
+const M = document.getElementById('main');
+function sec(id,eyebrow,title,lead,bodyNodes){
+ const s=el(`<section id="${id}"><div class="eyebrow">${eyebrow}</div><h2>${title}</h2>${lead?`<p class="lead">${lead}</p>`:''}</section>`);
+ (bodyNodes||[]).forEach(n=>s.appendChild(n));
+ M.appendChild(s);
+}
+
+/* hero */
+const hero = el(`<div class="hero">
+ <div class="ey">TNSU · Sports Communication</div>
+ <div class="philo">"${D.meta.philosophy}"</div>
+ <div class="vh">${D.meta.sub}<br>${D.meta.ver}</div>
+ <div class="scoreboard">${D.meta.stats.map(s=>`<div class="score"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('')}</div>
+</div>`);
+M.appendChild(hero);
+
+/* overview: structure + objective note */
+(()=>{
+ const card=el(`<div class="card pad"></div>`);
+ card.appendChild(el(`<h3 style="font-family:'Kanit';font-size:16px;margin-bottom:10px">โครงสร้างหลักสูตร (หน่วยกิต)</h3>`));
+ const t=el(`<table class="kv"></table>`);
+ D.structure.forEach(r=>{
+   const lead = r[0].startsWith('    ');
+   t.appendChild(el(`<tr><td style="${lead?'padding-left:26px;font-weight:400;color:#3A4A5E':''}">${esc(r[0].trim())}</td><td class="code">${esc(r[1])} หน่วยกิต</td></tr>`));
+ });
+ card.appendChild(t);
+ card.appendChild(el(`<div class="note">หลักสูตร 4 ปี ประเภทวิชาการ จัดการศึกษาแบบมุ่งผลลัพธ์ (OBE) ออกแบบให้ผลลัพธ์การเรียนรู้ การจัดการเรียนการสอน และการวัดประเมินผลสอดคล้องกัน (Constructive Alignment)</div>`));
+ sec('overview','Overview','ภาพรวมหลักสูตร','หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสื่อสารการกีฬา มุ่งผลิตบัณฑิตที่บูรณาการความรู้ด้านการสื่อสารสู่การเป็นนักสื่อสารทางการกีฬาที่มีคุณธรรมและจรรยาบรรณวิชาชีพ',[card]);
+})();
+
+/* PLOs */
+(()=>{
+ const g=el(`<div class="grid plos"></div>`);
+ D.plos.forEach(p=>{
+   g.appendChild(el(`<div class="card plo" style="--c:${PC[p.id-1]}">
+     <div class="jersey">${p.id}</div>
+     <div class="x"><span class="chip-d">PLO ${p.id} · ${p.domain}</span><b>ผลลัพธ์การเรียนรู้ที่ ${p.id}</b><p>${esc(p.text)}</p></div>
+   </div>`));
+ });
+ sec('plos','Program Outcomes','ผลลัพธ์การเรียนรู้ระดับหลักสูตร (PLOs)','สิ่งที่ผู้สำเร็จการศึกษาทุกคนต้องทำได้ จำแนกตามด้านความรู้ ทักษะ และจริยธรรม/ลักษณะบุคคล',[g]);
+})();
+
+/* YLOs season timeline */
+(()=>{
+ const wrap=el(`<div class="season"></div>`);
+ D.ylos.forEach(y=>{
+   const badges=y.plos.map(n=>`<span class="pb" style="background:${PC[n-1]}">${n}</span>`).join('');
+   const asses=y.assess.map(a=>`<div>${esc(a)}</div>`).join('');
+   wrap.appendChild(el(`<div class="ylo">
+     <div class="node">${y.year}</div>
+     <div class="card pad">
+       <div class="yhead"><b>ชั้นปีที่ ${y.year}</b><span class="badges">เชื่อมโยง PLO: ${badges}</span></div>
+       <p style="font-size:14.5px">${esc(y.text)}</p>
+       <div class="assess-list"><div style="font-family:'Kanit';color:var(--navy);background:none;padding-left:0">การวัดและประเมินผลรายชั้นปี</div>${asses}</div>
+     </div>
+   </div>`));
+ });
+ sec('ylos','Year Outcomes','ผลลัพธ์การเรียนรู้รายชั้นปี (YLOs)','พัฒนาการสะสมในแต่ละปี ที่นำไปสู่การบรรลุ PLOs เมื่อสำเร็จการศึกษา — กดดูว่าแต่ละปีต้องบรรลุอะไรและเชื่อมกับ PLO ใด',[wrap]);
+})();
+
+/* Curriculum Mapping (interactive) */
+(()=>{
+ const filt=el(`<div class="filters">
+   <span class="flabel">PLO:</span>
+   ${[1,2,3,4].map(n=>`<span class="chip p${n}" data-plo="${n}">PLO ${n}</span>`).join('')}
+   <span class="flabel" style="margin-left:6px">ชั้นปี:</span>
+   ${[1,2,3,4].map(n=>`<span class="chip yr" data-yr="${n}">ปี ${n}</span>`).join('')}
+   <input class="search" id="q" placeholder="ค้นหารหัส/ชื่อวิชา…">
+   <span class="count" id="cnt"></span>
+ </div>`);
+ const scr=el(`<div class="scroller"><table class="tbl" id="maptbl"><thead><tr>
+   <th>รายวิชา</th><th class="center">ปี</th>
+   <th class="center" style="color:#fff">PLO1</th><th class="center">PLO2</th><th class="center">PLO3</th><th class="center">PLO4</th>
+ </tr></thead><tbody id="mapbody"></tbody></table></div>`);
+ const legend=el(`<div class="legend">
+   <span><i class="dot" style="background:var(--p1)"></i> PLO1 ความรู้</span>
+   <span><i class="dot" style="background:var(--p2)"></i> PLO2 ทักษะ (ภาษาอังกฤษ)</span>
+   <span><i class="dot" style="background:var(--p3)"></i> PLO3 ทักษะ (ผลิตสื่อ/ออกแบบ)</span>
+   <span><i class="dot" style="background:var(--p4)"></i> PLO4 จริยธรรม/ลักษณะบุคคล</span>
+ </div>`);
+ sec('map','Curriculum Mapping','แผนที่การกระจายความรับผิดชอบ PLOs สู่รายวิชา','112 รายวิชา · กรองตาม PLO หรือชั้นปี และค้นหาชื่อวิชา เพื่อดูว่าวิชาใดรับผิดชอบผลลัพธ์การเรียนรู้ด้านใด (อ้างอิงตาราง 8 ใน มคอ.2)',[filt,scr,legend]);
+
+ const state={plo:new Set(),yr:new Set(),q:''};
+ const isCat=(t)=>/^\d+\.\s*หมวดวิชา/.test(t);
+ function pass(c){
+   if(state.plo.size){let ok=false;state.plo.forEach(n=>{if(c.p[n-1])ok=true});if(!ok)return false;}
+   if(state.yr.size && !state.yr.has(c.year))return false;
+   if(state.q){const s=(c.code+' '+c.name).toLowerCase();if(!s.includes(state.q))return false;}
+   return true;
+ }
+ function render(){
+   const body=document.getElementById('mapbody');body.innerHTML='';
+   let pending=[],shown=0,total=0;
+   D.mapItems.forEach(it=>{
+     if(it.t==='h'){const lvl=isCat(it.text)?1:2;pending=pending.filter(p=>p.lvl<lvl);pending.push({lvl,text:it.text});return;}
+     total++;
+     if(!pass(it))return;
+     pending.forEach(p=>{body.appendChild(el(`<tr class="${p.lvl===1?'grouprow':'subrow'}"><td colspan="6">${esc(p.text)}</td></tr>`));});
+     pending=[];
+     const dots=it.p.map((v,i)=>`<td class="center">${v?`<span class="dot" style="background:${PC[i]}"></span>`:''}</td>`).join('');
+     body.appendChild(el(`<tr><td><span class="code">${esc(it.code)}</span> ${esc(it.name)}</td><td class="center">${it.year}</td>${dots}</tr>`));
+     shown++;
+   });
+   document.getElementById('cnt').textContent=`แสดง ${shown} / ${total} วิชา`;
+ }
+ filt.querySelectorAll('[data-plo]').forEach(c=>c.onclick=()=>{const n=+c.dataset.plo;c.classList.toggle('on');state.plo.has(n)?state.plo.delete(n):state.plo.add(n);render();});
+ filt.querySelectorAll('[data-yr]').forEach(c=>c.onclick=()=>{const n=c.dataset.yr;c.classList.toggle('on');state.yr.has(n)?state.yr.delete(n):state.yr.add(n);render();});
+ filt.querySelector('#q').oninput=(e)=>{state.q=e.target.value.trim().toLowerCase();render();};
+ render();
+})();
+
+/* assess levels */
+(()=>{
+ const g=el(`<div class="grid levels"></div>`);
+ D.assessLevels.forEach(l=>{
+   g.appendChild(el(`<div class="card pad level">
+     <span class="when">${esc(l.when)}</span><h3>${esc(l.k)}</h3>
+     <p style="font-size:13.5px;color:var(--muted)">${esc(l.scope)}</p>
+     <ul>${l.how.map(h=>`<li>${esc(h)}</li>`).join('')}</ul>
+     <div class="by"><b style="font-family:'Kanit';font-weight:500">ประเมินโดย:</b> ${esc(l.by)}</div>
+   </div>`));
+ });
+ sec('assess','Assessment System','ระบบการวัดและประเมินผล 3 ระดับ','ประเมินผลลัพธ์การเรียนรู้ที่เชื่อมโยงกันตั้งแต่รายวิชา ชั้นปี จนถึงระดับหลักสูตร (อ้างอิงตาราง 16–18)',[g]);
+})();
+
+/* grades */
+(()=>{
+ const w=el(`<div class="gradewrap"></div>`);
+ D.grades.forEach(g=>{w.appendChild(el(`<div class="grade"><b>${esc(g[0])}</b><div><span style="font-family:'Kanit';font-weight:500">${esc(g[1].split(' (')[0])}</span><small>${esc(g[1].match(/\((.*)\)/)?.[1]||'')}</small></div><span class="gv">${g[2]}</span></div>`));});
+ const note=el(`<div class="note">ระบบการให้คะแนน 8 ระดับ ตามระเบียบ มกช. ว่าด้วยการจัดการศึกษาระดับปริญญาตรี พ.ศ. 2568 · สัญลักษณ์อื่น (I, W, S/U) เป็นไปตามระเบียบมหาวิทยาลัย</div>`);
+ sec('grades','Grading','เกณฑ์การให้ระดับคะแนน (เกรด)','',[w,note]);
+})();
+
+/* tracking plan */
+(()=>{
+ const scr=el(`<div class="scroller trk"><table class="tbl"><thead><tr>
+   <th class="center">ปี</th><th>YLO ที่ต้องบรรลุ</th><th class="center">PLO</th><th>เครื่องมือ/วิธีการวัด</th><th>ผู้ประเมิน & ช่วงเวลา</th>
+ </tr></thead><tbody></tbody></table></div>`);
+ const tb=scr.querySelector('tbody');
+ D.track.forEach((t,i)=>{
+   const ylo=D.ylos[i];
+   const badges=t.plos.map(n=>`<span class="pb" style="background:${PC[n-1]};width:21px;height:21px;font-size:11px;display:inline-grid;vertical-align:middle;margin:1px">${n}</span>`).join('');
+   tb.appendChild(el(`<tr>
+     <td class="center"><span class="yr">${t.year}</span></td>
+     <td style="min-width:200px;font-size:13px">${esc(ylo.text)}</td>
+     <td class="center" style="white-space:nowrap">${badges}</td>
+     <td style="min-width:220px"><ul>${t.tools.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></td>
+     <td style="min-width:150px;font-size:12.5px">${esc(t.by)}<br><i style="color:var(--energy)">⏱ ${esc(t.when)}</i></td>
+   </tr>`));
+ });
+ const tcard=el(`<div class="card pad" style="margin-top:16px"><h3 style="font-family:'Kanit';font-size:15px;margin-bottom:10px">เกณฑ์เป้าหมายการบรรลุผลลัพธ์การเรียนรู้</h3></div>`);
+ const tt=el(`<table class="tbl"><thead><tr><th>ระดับ</th><th>เป้าหมายเชิงปริมาณ</th><th>เป้าหมายเชิงคุณภาพ</th></tr></thead><tbody></tbody></table>`);
+ D.targets.forEach(r=>tt.querySelector('tbody').appendChild(el(`<tr><td class="code">${esc(r[0])}</td><td style="font-size:13px">${esc(r[1])}</td><td style="font-size:13px">${esc(r[2])}</td></tr>`)));
+ tcard.appendChild(tt);
+ tcard.appendChild(el(`<div class="note">เกณฑ์เชิงปริมาณรายด้านที่หลักสูตรกำหนด สามารถทบทวนปรับได้ตามรอบการประเมิน</div>`));
+ sec('track','Tracking Plan','แผนการประเมินผลลัพธ์การเรียนรู้รายชั้นปี (YLOs/PLOs)','ติดตามพัฒนาการสะสมของผู้เรียนแต่ละปี เชื่อม YLO ↔ PLO ↔ เครื่องมือวัด ↔ ผู้ประเมิน ↔ ช่วงเวลา',[scr,tcard]);
+})();
+
+/* grad checklist */
+(()=>{
+ const wrap=el(`<div class="checkwrap"></div>`);
+ const checks=el(`<div class="checks"></div>`);
+ const ringcard=el(`<div class="card ringcard">
+   <svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="#E3E9F0" stroke-width="11"/>
+   <circle id="prog" cx="60" cy="60" r="50" fill="none" stroke="var(--teal)" stroke-width="11" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 60 60)"/>
+   <text id="pct" x="60" y="67" text-anchor="middle" font-size="26" fill="var(--ink)">0%</text></svg>
+   <p>ความคืบหน้าสู่การสำเร็จการศึกษา</p><button class="reset" id="rs">ล้างการติ๊ก</button></div>`);
+ let done=load();
+ function save(a){try{localStorage.setItem('tnsu_grad',JSON.stringify(a))}catch(e){}}
+ function load(){try{return JSON.parse(localStorage.getItem('tnsu_grad')||'[]')}catch(e){return[]}}
+ D.grad.forEach((g,i)=>{
+   const row=el(`<div class="ck" data-i="${i}"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><span>${esc(g)}</span></div>`);
+   row.onclick=()=>{const i=+row.dataset.i;const k=done.indexOf(i);k>-1?done.splice(k,1):done.push(i);save(done);paint();};
+   checks.appendChild(row);
+ });
+ function paint(){
+   checks.querySelectorAll('.ck').forEach(c=>c.classList.toggle('done',done.includes(+c.dataset.i)));
+   const pct=Math.round(done.length/D.grad.length*100);
+   document.getElementById('pct').textContent=pct+'%';
+   document.getElementById('prog').setAttribute('stroke-dashoffset',314.16*(1-pct/100));
+ }
+ ringcard.querySelector('#rs').onclick=()=>{done=[];save(done);paint();};
+ wrap.appendChild(checks);wrap.appendChild(ringcard);
+ sec('grad','Graduation','เกณฑ์การสำเร็จการศึกษา','ติ๊กรายการที่ทำสำเร็จเพื่อติดตามความคืบหน้าของตนเอง (บันทึกไว้ในเครื่องนี้)',[wrap]);
+ paint();
+})();
+
+/* verify + exam steps */
+(()=>{
+ const v=D.verification;
+ const c1=el(`<div class="card pad"><h3 style="font-family:'Kanit';font-size:15px;margin-bottom:8px">การทวนสอบผลการเรียน (เกรด)</h3>
+   <ul class="level" style="display:block"><div style="display:grid;gap:6px">${v.grade.map(x=>`<li style="font-size:14px">${esc(x)}</li>`).join('')}</div></ul>
+   <div class="note">${esc(v.gradeTarget)}</div></div>`);
+ const c2=el(`<div class="card pad" style="margin-top:14px"><h3 style="font-family:'Kanit';font-size:15px;margin-bottom:8px">การทวนสอบผลสัมฤทธิ์</h3>
+   <p style="font-size:14px;margin-bottom:8px"><b style="color:var(--energy);font-family:'Kanit'">${esc(v.achieve)}</b></p>
+   <p style="font-size:14px;margin-bottom:6px">${esc(v.course)}</p>
+   <p style="font-size:14px">${esc(v.prog)}</p></div>`);
+ const stepsTitle=el(`<h3 style="font-family:'Kanit';font-size:15px;margin:18px 0 10px">ขั้นตอนการสอบประมวลความรู้ (Comprehensive Exam)</h3>`);
+ const steps=el(`<div class="steps"></div>`);
+ D.examSteps.forEach(s=>steps.appendChild(el(`<div class="st"><b></b><span>${esc(s)}</span></div>`)));
+ sec('verify','Verification','การทวนสอบ & การสอบประมวลความรู้','กระบวนการตรวจสอบความถูกต้องของผลการเรียนและผลสัมฤทธิ์ผลการเรียนรู้ของผู้เรียน',[c1,c2,stepsTitle,steps]);
+})();
+
+/* roles + calendar + grad list (for print) */
+(()=>{
+ const r=el(`<div class="card pad"><h3 style="font-family:'Kanit';font-size:15px;margin-bottom:8px">บทบาทหน้าที่ของผู้เกี่ยวข้อง</h3></div>`);
+ const rt=el(`<table class="kv"></table>`);
+ D.roles.forEach(x=>rt.appendChild(el(`<tr><td>${esc(x[0])}</td><td style="font-weight:400">${esc(x[1])}</td></tr>`)));
+ r.appendChild(rt);
+ const c=el(`<div class="card pad" style="margin-top:14px"><h3 style="font-family:'Kanit';font-size:15px;margin-bottom:8px">ปฏิทินการวัดและประเมินผล (ภาพรวมรายปี)</h3></div>`);
+ const ct=el(`<table class="kv"></table>`);
+ D.calendar.forEach(x=>ct.appendChild(el(`<tr><td>${esc(x[0])}</td><td style="font-weight:400">${esc(x[1])}</td></tr>`)));
+ c.appendChild(ct);
+ sec('roles','Governance','บทบาทหน้าที่ & ปฏิทินการประเมิน','',[r,c]);
+})();
+
+/* footer */
+M.appendChild(el(`<div class="foot">เอกสารอ้างอิง: มคอ.2 หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสื่อสารการกีฬา (หลักสูตรปรับปรุง พ.ศ. 2568) หมวดที่ 4 และ 7 · ประกาศ กมอ. เรื่อง รายละเอียดผลลัพธ์การเรียนรู้ตามมาตรฐานคุณวุฒิระดับอุดมศึกษา พ.ศ. 2565 · ระเบียบ มกช. ว่าด้วยการจัดการศึกษาระดับปริญญาตรี พ.ศ. 2568<br>หน้าเว็บนี้เป็นมุมมองที่จัดทำจากเล่ม มคอ.2 เพื่อการสื่อสารกับผู้เรียนและผู้มีส่วนได้ส่วนเสีย — เอกสารฉบับสมบูรณ์ให้ยึดตามเล่ม มคอ.2</div>`));
+
+/* ---------- audience filter ---------- */
+const seg=document.getElementById('seg');
+function applyAud(mode){
+ document.querySelectorAll('[data-nav]').forEach(a=>{
+   const t=a.dataset.tag;
+   const show = mode==='all' || t==='all' || t===mode;
+   a.classList.toggle('hide',!show);
+   const sct=document.getElementById(a.dataset.nav);
+   if(sct) sct.classList.toggle('hide',!show);
+ });
+ // hide empty group labels
+ document.querySelectorAll('#nav .grp').forEach(g=>{
+   let n=g.nextElementSibling,any=false;
+   while(n&&!n.classList.contains('grp')){if(n.matches('a')&&!n.classList.contains('hide'))any=true;n=n.nextElementSibling;}
+   g.classList.toggle('hide',!any);
+ });
+}
+seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');applyAud(b.dataset.aud);});
+applyAud('all');
+
+/* ---------- scrollspy ---------- */
+const io=new IntersectionObserver((ents)=>{
+ ents.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===id));}});
+},{rootMargin:'-20% 0px -70% 0px',threshold:0});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+
+/* print */
+document.getElementById('print').onclick=()=>window.print();
+
+</script>
+</body>
+</html>
